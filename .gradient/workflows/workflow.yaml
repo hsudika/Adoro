@@ -44,7 +44,7 @@ jobs:
         EOF
         apt update > /dev/null
         apt-get install -y jq
-        nvidia-smi
+        lscpu
         echo
         echo "Adoro can be accessed at URL:"
         gradient deployments get --id $(cat ./deployment.id)|jq '.deploymentSpecs[0].endpointUrl' -r
